@@ -1,0 +1,235 @@
+import pyautogui as pg
+import time
+
+class nikka:
+    日課 = {}
+    def __init__(self, 日課一覧):
+        # 初期化
+        self.日課 = 日課一覧
+      
+    def active(self):
+        # アシュテをアクティブにする
+        pg.click(self.日課["タスクバー"][0], self.日課["タスクバー"][1])
+    
+    def busou(self, 章):
+        pg.click(self.日課["王国"][0], self.日課["王国"][1]) 
+        time.sleep(3)
+        pg.click(self.日課["武装の秘境"][0], self.日課["武装の秘境"][1])
+        time.sleep(3)
+        pg.click(self.日課["進む"][0], self.日課["進む"][1]) 
+        time.sleep(20)
+        pg.click(章[0], 章[1]) 
+        time.sleep(3)
+        pg.click(self.日課["武装_EX"][0], self.日課["武装_EX"][1]) 
+        time.sleep(3)
+        pg.click(self.日課["武装_挑戦"][0], self.日課["武装_挑戦"][1]) 
+        time.sleep(10)
+        pg.click(self.日課["即時入場"][0], self.日課["即時入場"][1]) 
+        
+    def busou_loop(self):
+        for i in range(3):
+            self.busou(self.日課["緋の章"])
+            time.sleep(60*5)
+            self.busou(self.日課["焔の章"])
+            time.sleep(60*3)
+            self.busou(self.日課["桜の章"])
+            time.sleep(60*3)
+            self.busou(self.日課["龍の章"])
+            time.sleep(60*3)
+            self.busou(self.日課["砂の章"])
+            time.sleep(60*3)
+
+    def goei(self):
+        pg.click(self.日課["王国"][0], self.日課["王国"][1]) 
+        time.sleep(3)
+        pg.click(self.日課["護衛"][0], self.日課["護衛"][1])
+        time.sleep(3)
+        pg.click(self.日課["進む"][0], self.日課["進む"][1]) 
+        time.sleep(60)
+        pg.click(self.日課["護衛_受注"][0], self.日課["護衛_受注"][1])
+        time.sleep(60*8)
+                 
+    def dragon(self):
+        for i in range(2):
+            pg.click(self.日課["王国"][0], self.日課["王国"][1]) 
+            time.sleep(3)
+            pg.click(self.日課["ドラゴンの秘宝"][0], self.日課["ドラゴンの秘宝"][1])
+            time.sleep(3)
+            pg.click(self.日課["進む"][0], self.日課["進む"][1]) 
+            time.sleep(60)
+            pg.click(self.日課["ドラゴン_挑戦"][0], self.日課["ドラゴン_挑戦"][1]) 
+            time.sleep(10)
+            pg.click(self.日課["即時入場"][0], self.日課["即時入場"][1]) 
+            time.sleep(60*3)                        
+                 
+    def hankon(self):
+        pg.click(self.日課["王国"][0], self.日課["王国"][1]) 
+        time.sleep(3)
+        pg.click(self.日課["絆魂の秘境"][0], self.日課["絆魂の秘境"][1])
+        time.sleep(3)
+        pg.click(self.日課["進む"][0], self.日課["進む"][1]) 
+        time.sleep(60)
+        pg.click(self.日課["絆魂_挑戦"][0], self.日課["絆魂_挑戦"][1]) 
+        time.sleep(10)
+        pg.click(self.日課["即時入場"][0], self.日課["即時入場"][1]) 
+        time.sleep(60*3)
+        for i in range(2):
+            pg.click(self.日課["絆魂_挑戦"][0], self.日課["絆魂_挑戦"][1]) 
+            time.sleep(10)
+            pg.click(self.日課["即時入場"][0], self.日課["即時入場"][1]) 
+            time.sleep(60*3)    
+        pg.click(self.日課["終了"][0], self.日課["終了"][1]) 
+        time.sleep(2) 
+             
+                 
+    def syuren(self):
+        pg.click(self.日課["ギルド"][0], self.日課["ギルド"][1]) 
+        time.sleep(3)
+        pg.click(self.日課["イベント"][0], self.日課["イベント"][1]) 
+        time.sleep(3)
+        pg.click(self.日課["修練"][0], self.日課["修練"][1]) 
+        time.sleep(3)
+        pg.click(self.日課["寄付"][0], self.日課["寄付"][1]) 
+        time.sleep(2)
+        pg.click(self.日課["寄付"][0], self.日課["寄付"][1]) 
+        time.sleep(2)
+        pg.click(self.日課["寄付"][0], self.日課["寄付"][1]) 
+        time.sleep(2)
+        pg.click(self.日課["寄付"][0], self.日課["寄付"][1]) 
+        time.sleep(3)
+        pg.click(self.日課["終了"][0], self.日課["終了"][1]) 
+        time.sleep(4)  
+        pg.click(self.日課["終了"][0], self.日課["終了"][1]) 
+        time.sleep(4)                           
+                 
+    def hankon_daily(self):
+        pg.click(self.日課["王国"][0], self.日課["王国"][1]) 
+        time.sleep(3)
+        pg.click(self.日課["絆魂の秘境"][0], self.日課["絆魂の秘境"][1])
+        time.sleep(3)
+        pg.click(self.日課["進む"][0], self.日課["進む"][1]) 
+        time.sleep(3)
+        pg.click(self.日課["絆魂_ハード"][0], self.日課["絆魂_ハード"][1])
+        time.sleep(3)   
+        pg.click(self.日課["絆魂_デイリー"][0], self.日課["絆魂_デイリー"][1])
+        time.sleep(1)   
+        pg.click(self.日課["絆魂_デイリー"][0], self.日課["絆魂_デイリー"][1])
+        time.sleep(5)     
+        pg.click(self.日課["終了"][0], self.日課["終了"][1]) 
+        time.sleep(2)                         
+            
+    def daily(self):
+        pg.click(self.日課["デイリー"][0], self.日課["デイリー"][1])
+        time.sleep(3)
+        pg.click(self.日課["デイリー１"][0], self.日課["デイリー１"][1])
+        time.sleep(3)
+        pg.click(self.日課["デイリー２"][0], self.日課["デイリー２"][1])
+        time.sleep(3)
+        pg.click(self.日課["デイリー３"][0], self.日課["デイリー３"][1])
+        time.sleep(3)
+        pg.click(self.日課["デイリー４"][0], self.日課["デイリー４"][1]) 
+        time.sleep(3)
+        pg.click(self.日課["デイリー５"][0], self.日課["デイリー５"][1])
+        time.sleep(3)        
+        pg.click(self.日課["終了"][0], self.日課["終了"][1]) 
+        time.sleep(2)                         
+        
+    def bag_daily(self):
+        pg.click(self.日課["カバン"][0], self.日課["カバン"][1]) 
+        time.sleep(3) 
+        pg.click(self.日課["階級"][0], self.日課["階級"][1]) 
+        time.sleep(3) 
+        pg.click(self.日課["受け取り"][0], self.日課["受け取り"][1]) 
+        time.sleep(3) 
+        pg.click(self.日課["受け取り"][0], self.日課["受け取り"][1]) 
+        time.sleep(3) 
+        pg.click(self.日課["終了"][0], self.日課["終了"][1]) 
+        time.sleep(2)   
+    
+    def login_daily(self):
+        pg.click(self.日課["お得セット"][0], self.日課["お得セット"][1]) 
+        time.sleep(3) 
+        pg.click(self.日課["ログイン"][0], self.日課["ログイン"][1]) 
+        time.sleep(3) 
+        pg.click(self.日課["ログイン受け取り"][0], self.日課["ログイン受け取り"][1])         
+        time.sleep(5)  
+        pg.click(self.日課["ログイン受け取り"][0], self.日課["ログイン受け取り"][1])         
+        time.sleep(5) 
+        pg.click(self.日課["終了"][0], self.日課["終了"][1]) 
+        time.sleep(2)   
+        pg.click(self.日課["終了"][0], self.日課["終了"][1]) 
+        time.sleep(2)       
+    
+    def seihai_daily(self):
+        pg.click(self.日課["王国"][0], self.日課["王国"][1]) 
+        time.sleep(3)
+        pg.click(self.日課["聖杯クエスト"][0], self.日課["聖杯クエスト"][1]) 
+        time.sleep(2)           
+        for i in range(10):
+            pg.click(self.日課["聖杯クエスト受け取り"][0], self.日課["聖杯クエスト受け取り"][1]) 
+            time.sleep(1)
+        pg.click(self.日課["聖杯_終了"][0], self.日課["聖杯_終了"][1]) 
+        time.sleep(2)   
+        pg.click(self.日課["終了"][0], self.日課["終了"][1]) 
+        time.sleep(3)        
+    
+    
+    def shop_daily(self):    
+        pg.click(self.日課["ショップ"][0], self.日課["ショップ"][1])
+        time.sleep(4) 
+        pg.click(self.日課["金貨"][0], self.日課["金貨"][1])
+        time.sleep(4) 
+        pg.click(self.日課["金貨交換"][0], self.日課["金貨交換"][1])
+        time.sleep(4)     
+        pg.click(self.日課["終了"][0], self.日課["終了"][1]) 
+        time.sleep(2)        
+            
+    def shop_buy(self, 品物):
+        pg.click(品物[0], 品物[1])
+        time.sleep(3)         
+        pg.click(self.日課["個数"][0], self.日課["個数"][1])        
+        time.sleep(3)  
+        pg.click(self.日課["９"][0], self.日課["９"][1]) 
+        time.sleep(2)  
+        pg.click(self.日課["９"][0], self.日課["９"][1])    
+        time.sleep(2)  
+        pg.click(self.日課["９"][0], self.日課["９"][1]) 
+        time.sleep(2)  
+        pg.click(self.日課["９"][0], self.日課["９"][1])    
+        time.sleep(2) 
+        pg.click(self.日課["確認"][0], self.日課["確認"][1])        
+        time.sleep(3)  
+        pg.click(self.日課["購入"][0], self.日課["購入"][1])          
+                    
+    def shop_items(self):    
+        pg.click(self.日課["ショップ"][0], self.日課["ショップ"][1])
+        time.sleep(4) 
+        pg.click(self.日課["金貨"][0], self.日課["金貨"][1])
+        time.sleep(4) 
+        self.shop_buy(self.日課["金貨１"])
+        time.sleep(4) 
+        self.shop_buy(self.日課["金貨２"])    
+        time.sleep(4)    
+        pg.click(self.日課["ポイント"][0], self.日課["ポイント"][1])
+        time.sleep(4)
+        self.shop_buy(self.日課["ポイント１"])        
+        time.sleep(4)      
+        self.shop_buy(self.日課["ポイント２"])        
+        time.sleep(4)
+        self.shop_buy(self.日課["ポイント３"])        
+        time.sleep(4)          
+        pg.click(self.日課["ショップ中心"][0], self.日課["ショップ中心"][1])
+        time.sleep(1)         
+        pg.dragTo(self.日課["ショップ中心"][0], self.日課["ショップ中心"][1]-320, 3, button='left')
+        time.sleep(4)         
+        self.shop_buy(self.日課["ポイント４"])        
+        time.sleep(4)      
+        self.shop_buy(self.日課["ポイント５"])        
+        time.sleep(4)
+        self.shop_buy(self.日課["ポイント６"])        
+        time.sleep(4)           
+        self.shop_buy(self.日課["ポイント７"])        
+        time.sleep(4)               
+        pg.click(self.日課["終了"][0], self.日課["終了"][1]) 
+        time.sleep(2)        
+        
