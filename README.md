@@ -1,4 +1,4 @@
-## AshTaleNikka --- アシュテの日課を自動化する
+## AshTaleNikka --- アシュテの日課を自動化するモジュール
 
 ソースコード：AshTaleNikka.py
 
